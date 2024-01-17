@@ -1,5 +1,4 @@
 export function Convertidor(inputValue, selectedOption) {
-  console.log("OPCIONES" + inputValue);
   console.log(selectedOption);
   const conversionMap = {
     Yavin: { Yavin: 0, Lothal: 3277, Convenio: -36, Hosnian: 7977, Sith: -35 },

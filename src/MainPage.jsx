@@ -4,8 +4,8 @@ import { Convertidor } from "./FuncionConvertidor";
 
 const MainPage = () => {
   const [result, setResult] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  const [selectedOption, setSelectedOption] = useState("");
+  const [inputValue, setInputValue] = useState(0);
+  const [selectedOption, setSelectedOption] = useState("Yavin");
   const [convertedValues, setConvertedValues] = useState({
     Yavin: 0,
     Lothal: 0,
