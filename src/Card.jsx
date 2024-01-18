@@ -1,15 +1,21 @@
 import React from "react";
+import "./Card.css";
 
 const Card = (props) => {
   console.log(props);
   return (
-    <section>
+    <section className="card">
       <div>
-        <p> Calendario Estándar Galáctico: {props.Yavin}</p>
-        <p> Calendario Convenio Galáctico: {props.Convenio}</p>
-        <p> Contabilidad Imperio Sith: {props.Sith}</p>
-        <p> Calendario Lothal: {props.Lothal}</p>
-        <p> Contabilidad de Hosnian: {props.Hosnian}</p>
+        <p className="name"> Calendario Estándar Galáctico: </p>{" "}
+            <p className="content"> {props.Yavin}</p>
+        <p className="name"> Calendario Convenio Galáctico: </p>{" "}
+            <p className="content"> {props.Convenio}</p>
+        <p className="name"> Contabilidad Imperio Sith: </p>{" "}
+            <p className="content"> {props.Sith}</p>
+        <p className="name"> Calendario Lothal: </p>{" "}
+            <p className="content"> {props.Lothal}</p>
+        <p className="name"> Contabilidad de Hosnian: </p>{" "}
+            <p className="content"> {props.Hosnian}</p>
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 export function Convertidor(inputValue, selectedOption) {
-  console.log(selectedOption);
   const conversionMap = {
     Yavin: { Yavin: 0, Lothal: 3277, Convenio: -36, Hosnian: 7977, Sith: -35 },
     Convenio: { Yavin: 36, Lothal: 3313, Convenio: 0, Hosnian: 8013, Sith: -1 },
@@ -20,6 +19,14 @@ export function Convertidor(inputValue, selectedOption) {
     },
   };
 
+  const datacionMap = {
+    Yavin: { Neg: " ABY", Pos: " DBY" },
+    Convenio: { Neg: " ACG", Pos: " DCG" },
+    Sith: { Neg: " AIS", Pos: " DIS" },
+    Lothal: " AL",
+    Hosnian: " C.R.C.",
+  };
+
   const differences = conversionMap[selectedOption];
 
   if (!differences) {
@@ -27,9 +34,26 @@ export function Convertidor(inputValue, selectedOption) {
     return {};
   }
 
+  function formatearNumero(numero) {
+    return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  }
+
   const objConvertYears = {};
   for (const key in differences) {
-    objConvertYears[key] = Number(inputValue) + differences[key];
+    let result,
+      number = Number(inputValue) + differences[key];
+    if (number < 0 && (key == "Yavin" || key == "Sith" || key == "Convenio")) {
+      result = formatearNumero(Math.abs(number)) + datacionMap[key]["Neg"];
+    } else if (
+      number >= 0 &&
+      (key == "Yavin" || key == "Sith" || key == "Convenio")
+    ) {
+      result = formatearNumero(Math.abs(number)) + datacionMap[key]["Pos"];
+    } else {
+      result = formatearNumero(number) + datacionMap[key];
+    }
+
+    objConvertYears[key] = result;
   }
 
   return objConvertYears;

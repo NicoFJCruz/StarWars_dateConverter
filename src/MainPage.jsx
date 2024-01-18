@@ -47,22 +47,27 @@ const MainPage = () => {
   }
 
   return (
-    <>
-      <div>Convertor de Año</div>
+    <section className="container">
+      <h1 id="title">Convertor de Año</h1>
 
-      <div>
-        <input type="text" value={inputValue} onInput={handleInputChange} />
-        <>
-          <select value={selectedOption} onChange={handleSelectChange}>
+      <div className="convertor">
+        <div className="optionsContainer">
+          <input id="inputText" type="text" value={inputValue} onInput={handleInputChange} />
+
+          <select id="selectedOption" value={selectedOption} onChange={handleSelectChange}>
             <option value="Lothal">Calendario Lothal</option>
             <option value="Yavin">Batalla de Yavin</option>
             <option value="Convenio">Convenio Galáctico</option>
             <option value="Hosnian">Contabilidad de Hosnian</option>
             <option value="Sith">Nuevo Imperio Sith</option>
           </select>
-        </>
-        <button onClick={resultado}> Convertir </button>
+        </div>
+
+        <button id="convertButton" onClick={resultado}>
+          Mostrar resultados
+        </button>
       </div>
+
       <Card
         Yavin={convertedValues.Yavin}
         Lothal={convertedValues.Lothal}
@@ -70,7 +75,7 @@ const MainPage = () => {
         Hosnian={convertedValues.Hosnian}
         Sith={convertedValues.Sith}
       />
-    </>
+    </section>
   );
 };
 
