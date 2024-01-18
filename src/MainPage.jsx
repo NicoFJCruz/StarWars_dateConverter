@@ -5,13 +5,15 @@ import { Convertidor } from "./FuncionConvertidor";
 const MainPage = () => {
   const [result, setResult] = useState(false);
   const [inputValue, setInputValue] = useState(0);
-  const [selectedOption, setSelectedOption] = useState("Yavin");
+  const [selectedOption, setSelectedOption] = useState("Convenio");
   const [convertedValues, setConvertedValues] = useState({
     Yavin: 0,
     Lothal: 0,
     Convenio: 0,
     Hosnian: 0,
     Sith: 0,
+    Imperio: 0,
+    Naboo: 0,
   });
 
   const handleSelectChange = (event) => {
@@ -35,6 +37,8 @@ const MainPage = () => {
       Convenio: Valores.Convenio,
       Hosnian: Valores.Hosnian,
       Sith: Valores.Sith,
+      Imperio: Valores.Imperio,
+      Naboo: Valores.Naboo,
     });
   }
 
@@ -64,11 +68,15 @@ const MainPage = () => {
             value={selectedOption}
             onChange={handleSelectChange}
           >
-            <option value="Lothal">Calendario Lothal</option>
-            <option value="Yavin">Batalla de Yavin</option>
-            <option value="Convenio">Convenio Galáctico</option>
-            <option value="Hosnian">Contabilidad de Hosnian</option>
-            <option value="Sith">Nuevo Imperio Sith</option>
+            <option value="Convenio">Calendario del Convenio Galáctico</option>
+            <option value="Sith">Calendario del Nuevo Imperio Sith</option>
+            <option value="Yavin">Calendario de la Batalla de Yavin</option>
+            <option value="Imperio">
+              Calendario de la Formación del Imperio
+            </option>
+            <option value="Naboo">Calendario de Naboo</option>
+            <option value="Lothal">Calendario de Lothal</option>
+            <option value="Hosnian">Calendario de Recuento de Coruscant</option>
           </select>
         </div>
 
@@ -83,6 +91,8 @@ const MainPage = () => {
         Convenio={convertedValues.Convenio}
         Hosnian={convertedValues.Hosnian}
         Sith={convertedValues.Sith}
+        Naboo={convertedValues.Naboo}
+        Imperio={convertedValues.Imperio}
       />
     </section>
   );
