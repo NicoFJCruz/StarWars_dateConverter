@@ -52,9 +52,18 @@ const MainPage = () => {
 
       <div className="convertor">
         <div className="optionsContainer">
-          <input id="inputText" type="text" value={inputValue} onInput={handleInputChange} />
+          <input
+            id="inputText"
+            type="text"
+            value={inputValue}
+            onInput={handleInputChange}
+          />
 
-          <select id="selectedOption" value={selectedOption} onChange={handleSelectChange}>
+          <select
+            id="selectedOption"
+            value={selectedOption}
+            onChange={handleSelectChange}
+          >
             <option value="Lothal">Calendario Lothal</option>
             <option value="Yavin">Batalla de Yavin</option>
             <option value="Convenio">Convenio Galáctico</option>
