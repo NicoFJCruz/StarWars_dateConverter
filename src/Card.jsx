@@ -9,7 +9,7 @@ const Card = (props) => {
             <p className="content"> {props.Yavin}</p>
         <p className="name"> Calendario Convenio Galáctico: </p>{" "}
             <p className="content"> {props.Convenio}</p>
-        <p className="name"> Contabilidad Imperio Sith: </p>{" "}
+        <p className="name"> Calendario Nuevo Imperio Sith: </p>{" "}
             <p className="content"> {props.Sith}</p>
         <p className="name"> Calendario Lothal: </p>{" "}
             <p className="content"> {props.Lothal}</p>
