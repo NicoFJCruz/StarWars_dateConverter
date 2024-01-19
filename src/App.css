@@ -26,10 +26,10 @@
   align-items: center;
 }
 
-#inputText{
+#inputText {
   margin: 0.5rem;
   width: 8rem;
-  height: 2rem; 
+  height: 2rem;
   font-size: 1rem;
   border-radius: 5%;
   padding: 8px;
@@ -63,22 +63,22 @@
   background-color: gray;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 520px) {
   .optionsContainer {
     flex-direction: column;
   }
-  
-  #inputText{
-    width: 11rem;
+
+  #inputText {
+    width: 15rem;
   }
-  
+
   #selectedOption {
-    width: 11rem;
+    width: 15rem;
   }
-  
+
   #convertButton {
     font-size: 1rem;
-    width: 11rem;
-    height: 2.5rem; 
+    width: 15rem;
+    height: 2.5rem;
   }
 }
