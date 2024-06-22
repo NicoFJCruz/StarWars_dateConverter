@@ -14,6 +14,9 @@ const MainPage = () => {
     Sith: 0,
     Imperio: 0,
     Naboo: 0,
+    Kaas: 0,
+    Ruusan: 0,
+    Doman: 0,
   });
 
   const handleSelectChange = (event) => {
@@ -39,6 +42,9 @@ const MainPage = () => {
       Sith: Valores.Sith,
       Imperio: Valores.Imperio,
       Naboo: Valores.Naboo,
+      Kaas: Valores.Kaas,
+      Ruusan: Valores.Ruusan,
+      Doman: Valores.Doman,
     });
   }
 
@@ -77,6 +83,10 @@ const MainPage = () => {
             <option value="Naboo">Calendario de Naboo</option>
             <option value="Lothal">Calendario de Lothal</option>
             <option value="Hosnian">Calendario de Recuento de Coruscant</option>
+
+            <option value="Doman">Calendario Acuerdo de Domanción</option>
+            <option value="Ruusan">Calendario Reforma de Ruusan</option>
+            <option value="Kaas">Calendario Redescubrimiento de Kaas</option>
           </select>
         </div>
 
@@ -93,6 +103,9 @@ const MainPage = () => {
         Sith={convertedValues.Sith}
         Naboo={convertedValues.Naboo}
         Imperio={convertedValues.Imperio}
+        Kaas={convertedValues.Kaas}
+        Ruusan={convertedValues.Ruusan}
+        Doman={convertedValues.Doman}
       />
     </section>
   );

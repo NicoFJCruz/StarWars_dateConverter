@@ -19,6 +19,12 @@ const Card = (props) => {
             <p className="content"> {props.Lothal}</p>
         <p className="name"> Calendario de Recuento de Coruscant: </p>
             <p className="content"> {props.Hosnian}</p>
+        <p className="name"> Calendario Acuerdo de Domanción: </p>
+            <p className="content"> {props.Doman}</p>  
+        <p className="name"> Calendario Reforma de Ruusan: </p>
+            <p className="content"> {props.Ruusan}</p>  
+        <p className="name"> Calendario Redescubrimiento de Kaas: </p>
+            <p className="content"> {props.Kaas}</p>
       </div>
     </section>
   );
