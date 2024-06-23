@@ -81,12 +81,11 @@ const MainPage = () => {
               Calendario de la Formación del Imperio
             </option>
             <option value="Naboo">Calendario de Naboo</option>
-            <option value="Lothal">Calendario de Lothal</option>
-            <option value="Hosnian">Calendario de Recuento de Coruscant</option>
-
-            <option value="Doman">Calendario Acuerdo de Domanción</option>
             <option value="Ruusan">Calendario Reforma de Ruusan</option>
+            <option value="Lothal">Calendario de Lothal</option>
             <option value="Kaas">Calendario Redescubrimiento de Kaas</option>
+            <option value="Hosnian">Calendario de Recuento de Coruscant</option>
+            <option value="Doman">Calendario Acuerdo de Domanción</option>
           </select>
         </div>
 
